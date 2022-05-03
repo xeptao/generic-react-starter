@@ -1,24 +1,5 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier/prettier",
-  ],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
-  plugins: ["react", "@typescript-eslint", "prettier", "import"],
+  // manually set
   rules: {
     "prettier/prettier": "error",
     "import/order": [
@@ -29,16 +10,16 @@ module.exports = {
           {
             pattern: "react",
             group: "builtin",
-            position: "before",
-          },
+            position: "before"
+          }
         ],
         pathGroupsExcludedImportTypes: ["react"],
         "newlines-between": "always",
         alphabetize: {
           order: "asc",
-          caseInsensitive: true,
-        },
-      },
+          caseInsensitive: true
+        }
+      }
     ],
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
@@ -54,9 +35,31 @@ module.exports = {
       2,
       {
         argsIgnorePattern: "^_",
-        varsIgnorePattern: "^_",
-      },
+        varsIgnorePattern: "^_"
+      }
     ],
-    "no-console": "warn",
+    "no-console": "warn"
   },
+  plugins: ["react", "@typescript-eslint", "prettier/prettier", "import"],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/prettier"
+  ],
+
+  // automatically set
+  env: {
+    browser: true,
+    es2021: true,
+    node: true
+  },
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
+    ecmaVersion: "latest",
+    sourceType: "module"
+  }
 };
