@@ -9,16 +9,16 @@ module.exports = {
           {
             pattern: "react",
             group: "builtin",
-            position: "before"
-          }
+            position: "before",
+          },
         ],
         pathGroupsExcludedImportTypes: ["react"],
         "newlines-between": "always",
         alphabetize: {
           order: "asc",
-          caseInsensitive: true
-        }
-      }
+          caseInsensitive: true,
+        },
+      },
     ],
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
@@ -34,10 +34,11 @@ module.exports = {
       2,
       {
         argsIgnorePattern: "^_",
-        varsIgnorePattern: "^_"
-      }
+        varsIgnorePattern: "^_",
+      },
     ],
-    "no-console": "warn"
+    "no-console": "warn",
+    "prettier/prettier": "error",
   },
   plugins: ["react", "@typescript-eslint", "prettier", "import"],
   extends: [
@@ -45,21 +46,21 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "react-app",
-    "react-app/jest"
+    "react-app/jest",
   ],
 
   // automatically set
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: "latest",
-    sourceType: "module"
-  }
+    sourceType: "module",
+  },
 };
