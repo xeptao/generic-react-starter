@@ -1,7 +1,7 @@
 {
   "src/**/*.{ts,tsx}": [
     "yarn lint:fix",
-    "yarn prettify",
+    "yarn format",
     "git add . -A"
   ]
 }
