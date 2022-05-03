@@ -1,7 +1,6 @@
 module.exports = {
   // manually set
   rules: {
-    "prettier/prettier": "error",
     "import/order": [
       "error",
       {
@@ -40,12 +39,11 @@ module.exports = {
     ],
     "no-console": "warn"
   },
-  plugins: ["react", "@typescript-eslint", "prettier/prettier", "import"],
+  plugins: ["react", "@typescript-eslint", "prettier", "import"],
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier/prettier",
     "react-app",
     "react-app/jest"
   ],
